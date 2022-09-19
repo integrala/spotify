@@ -9,12 +9,19 @@ class Yabanci extends StatefulWidget {
 class _YabanciViewState extends State<Yabanci> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
-      backgroundColor: Colors.brown.shade900,
-      appBar: AppBar(
-        
-      ),
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          flexibleSpace: FlexibleSpaceBar(
+            background: Center(
+              child: Image.asset(
+                "assets/images/yabanci.jpg",
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }
